@@ -4,7 +4,6 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
-#include <string.h>
 
 static int current_line_count = 0;
 static int next_start_stop = 50;
