@@ -1,11 +1,18 @@
-#include <time.h>
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
 
-const char FILE_PATH[] = "/home/marko/Desktop/Eagle/project_2/candump.log";
+const char FILE_PATH[] = "../candump.log";
 
+FILE* open_file(const char* filename) {
+    FILE* file = fopen(filename, "a");
+
+    if (file == NULL) {
+        perror("Error opening file");
+        return NULL;
+    }
+}
 int get_rows_of_file(){
     FILE *file = fopen(FILE_PATH, "r");
 
